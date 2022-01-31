@@ -39,12 +39,12 @@
                     <button id="select_button"></button>
                     <ul class="selection">
                         <li>
-                            <a href="air.html">
+                            <a href="dashboard_air.html">
                                 <h3>Kolam Ikan</h3>
                             </a>
                         </li>
                         <li>
-                            <a href="tanaman.html">
+                            <a href="dashboard_tanaman.html">
 
                                 <h3>Tanaman</h3>
                             </a>
@@ -65,21 +65,21 @@
                     <li class="card">
                         <div class="text">
                             <h3>Suhu Air</h3>
-                            <h1>0</h1>
+                            <h1 id="param_temp">0</h1>
                         </div>
                         <img src="img/temp_water.svg" alt="">
                     </li>
                     <li class="card">
                         <div class="text">
                             <h3>pH Air</h3>
-                            <h1>0</h1>
+                            <h1 id="param_ph">0</h1>
                         </div>
                         <img src="img/water.svg" alt="">
                     </li>
                     <li class="card">
                         <div class="text">
                             <h3>Ketinggian Air</h3>
-                            <h1>0</h1>
+                            <h1 id="param_waterlevel">0</h1>
                         </div>
                         <img src="img/water_level.svg" alt="">
                     </li>
@@ -87,14 +87,14 @@
                     <li class="card">
                         <div class="text">
                             <h3>Pemberian Pakan</h3>
-                            <h1>0/3</h1>
+                            <h1 id="param_pakan">0</h1>
                         </div>
                         <img src="img/pakan.svg" alt="">
                     </li>
                     <li class="card">
                         <div class="text">
                             <h3>Bobot Pakan</h3>
-                            <h1>0 gr</h1>
+                            <h1 id="param_bobot">0</h1>
                         </div>
                         <img src="img/botol_pakan.svg" alt="">
                     </li>
@@ -122,8 +122,27 @@
 
         </div>
     </div>
+    <script type="module">
+        // Import the functions you need from the SDKs you need
+        import { initializeApp } from "https://www.gstatic.com/firebasejs/9.6.5/firebase-app.js";
+        // TODO: Add SDKs for Firebase products that you want to use
+        // https://firebase.google.com/docs/web/setup#available-libraries
 
-    <script src="" async defer></script>
+        // Your web app's Firebase configuration
+        const firebaseConfig = {
+            apiKey: "AIzaSyCHkC_UxNjJ_psG9Z69Fkvvycxp742i2mY",
+            authDomain: "aquaponik-2.firebaseapp.com",
+            databaseURL: "https://aquaponik-2-default-rtdb.asia-southeast1.firebasedatabase.app",
+            projectId: "aquaponik-2",
+            storageBucket: "aquaponik-2.appspot.com",
+            messagingSenderId: "388744692780",
+            appId: "1:388744692780:web:55431265dee9b646223d89"
+        };
+
+        // Initialize Firebase
+        const app = initializeApp(firebaseConfig);
+    </script>
+    <script src="script.js" type="module"></script>
 </body>
 
 </html>
